@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jejak Baruklinting : Chef Hebat Banyubiru</title>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js"></script>
+<style>
+*{box-sizing:border-box}html{font-size:16px}
+body{margin:0;background:#06283d;height:100vh;display:grid;place-items:center;font:1rem system-ui,sans-serif;color:#0c2a3a}
+#app{position:relative;width:min(100vw,177.78vh);aspect-ratio:16/9;overflow:hidden;background-size:cover}
+#top{position:absolute;top:0;left:0;right:0;height:3rem;display:flex;gap:.4rem;padding:.4rem;background:#0b5d8acc;z-index:10}
+#top button{font-size:1.1rem}#top .sp{flex:1}
+#main{position:absolute;top:3rem;left:0;right:0;bottom:0;overflow:auto;padding:1rem 2rem}
+.btn{background:#f2a65a;border:0;border-radius:.8rem;padding:.5rem 1.1rem;min-height:2.4rem;font:bold 1rem system-ui;cursor:pointer;color:#3a1c00;margin:.2rem}
+.btn.s{background:#fff;border:2px solid #0b5d8a;color:#0b5d8a}.btn:disabled{opacity:.5}
+.btn.ok{background:#8be3a8!important}.btn.no{background:#ff9d9d!important}
+.card,.md{background:#fffdf5ee;border-radius:1rem;padding:1rem;box-shadow:0 .3rem 1rem #0005}
+.md{position:relative;max-width:90%;max-height:92%;overflow:auto}.md.wide{width:92%}
+.ov{position:absolute;inset:0;background:#0008;display:grid;place-items:center;z-index:50}
+.x{position:absolute;right:.5rem;top:.5rem}
+h1{color:#fff;text-shadow:0 .1rem .3rem #000;font-size:2rem;margin:.3rem 0}h2,h3{margin:.3rem 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.vid{position:relative;height:17rem;background:#0b5d8a;border-radius:1rem;overflow:hidden;color:#fff;text-align:center;font-size:3rem}
+.vid video{position:absolute;inset:0;width:100%;height:100%;z-index:2;background:#000}.fb{padding-top:3rem}.fb small{display:block;font-size:1rem;padding:0 1rem}
+input[type=text],textarea{width:100%;padding:.5rem;font-size:1rem;border-radius:.6rem;border:2px solid #0b5d8a}
+.chs{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;margin:.5rem 0}
+.ch{background:#fff;border:3px solid transparent;border-radius:.8rem;padding:.3rem;cursor:pointer}.ch.sel{border-color:#f2a65a;background:#fff1d6}
+.pw{position:relative;display:inline-grid;place-items:center;font-size:2.2rem}.pw img{position:relative;z-index:1;max-width:100%;max-height:4rem}.pw i{position:absolute;font-style:normal}
+.pw.big{font-size:6rem}.pw.big img{max-height:14rem}.pw.sm{font-size:3rem}.pw.sm img{max-height:8rem}
+.sl{max-width:48rem;margin:0 auto;text-align:center;font-size:1.2rem}
+.fi{display:inline-flex;align-items:center;gap:.4rem}.fr{display:inline-flex;flex-direction:column;align-items:center}
+.fi input{width:4.5rem;padding:.3rem;font-size:1rem;text-align:center;border:2px solid #0b5d8a;border-radius:.5rem}.fr hr{width:100%;margin:.2rem 0;border:1px solid #000}
+.f{fill:#f2a65a;stroke:#fff}.e{fill:#fff;stroke:#888}svg{max-width:100%}
+.kit{display:grid;grid-template-columns:14rem 1fr 9rem;gap:1rem;align-items:start}
+.bub{background:#fff;border-radius:1rem;padding:.6rem;margin-top:.5rem}.hud{color:#fff;font-weight:bold;background:#0b5d8aaa;border-radius:.6rem;padding:.3rem .8rem;margin-bottom:.5rem}
+.cup{text-align:center;font-size:2.5rem}.cup svg{width:7rem}
+#fill{transform:scaleY(0);transform-origin:center bottom;transform-box:fill-box;transition:transform 1.5s}
+.doors{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem}
+.door{width:13rem;height:15rem;border-radius:1rem;border:0;background:#fff1d6;font-size:3rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem}
+.door span,.door b,.door small{font-size:1.1rem}.door.lock{filter:grayscale(1);opacity:.6}
+.qc{border-bottom:1px solid #ccc;padding:.5rem 0}.op{display:flex;flex-wrap:wrap}.lnk{background:none;border:0;color:#0b5d8a;cursor:pointer;font-size:1rem}
+.ex{background:#eaf7ff;border-radius:.8rem;padding:.6rem;margin:.5rem 0}.warn{background:#fff1d6;border-left:.4rem solid #f2a65a;padding:.5rem}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:.5rem}
+.gift{font-size:7rem;cursor:pointer;animation:bob 1s infinite alternate}@keyframes bob{to{transform:translateY(-1rem)}}
+.cf{position:absolute;top:-2rem;width:.7rem;height:1rem;animation:fall 2s linear forwards;z-index:99}@keyframes fall{to{transform:translateY(46rem) rotate(720deg)}}
+.shake{animation:sh .4s;box-shadow:inset 0 0 0 .4rem #e33}@keyframes sh{25%{transform:translateX(-.6rem)}75%{transform:translateX(.6rem)}}
+.toast{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);background:#000c;color:#fff;padding:.6rem 1rem;border-radius:1rem;z-index:99}
+#rot{display:none;position:absolute;inset:0;background:#06283d;color:#fff;z-index:200;place-items:center;text-align:center}
+@media(orientation:portrait) and (max-width:700px){#rot{display:grid}}
+</style></head><body>
+<div id="app"><div id="top"></div><div id="main"></div><div id="rot">📱 Putar ponsel ke mode landscape</div></div>
+<script>
+/* ===== ASET: gambar (.png), suara (.mp3), video (.mp4) dimuat dari folder assets/. Ganti file di folder tersebut (nama sama) untuk mengubah tampilan/suara ===== */
+const ASSETS={
+ bg_awal:"assets/gambar/bg_awal.png", bg_prolog:"assets/gambar/bg_prolog.png", bg_dapur:"assets/gambar/bg_dapur.png",
+ video:'assets/video/video_awal.mp4',
+ chef_ai:"assets/gambar/chef_ai.png",
+ nyi_lantung:"assets/gambar/nyi_lantung.png",
+ baruklinting:"assets/gambar/baruklinting.png",
+ prolog:["assets/gambar/prolog_1.png","assets/gambar/prolog_2.png","assets/gambar/prolog_3.png","assets/gambar/prolog_4.png","assets/gambar/prolog_5.png"],
+ bukit:"assets/gambar/bukit_cinta.png",
+ dapur_png:"assets/gambar/dapur_pendukung.png",
+ balai:"assets/gambar/balai_desa.png",
+ banjir:"assets/gambar/banjir.png",
+ hadiah:"assets/gambar/kotak_hadiah.png",
+ foto:"assets/gambar/foto_pengembang.png",
+ kar:["assets/gambar/karakter_1.png","assets/gambar/karakter_2.png","assets/gambar/karakter_3.png","assets/gambar/karakter_4.png","assets/gambar/karakter_5.png","assets/gambar/karakter_6.png","assets/gambar/karakter_7.png","assets/gambar/karakter_8.png","assets/gambar/karakter_9.png","assets/gambar/karakter_10.png"]
+};
+const SEA='linear-gradient(#bfeaff,#3aa6c9 60%,#2e9c7f)',KIT='linear-gradient(#fff1d6,#f2c58a 60%,#b9733a)';
+const CH=[['Kancil','🦌'],['Burung Jalak','🐦'],['Ikan Gabus','🐟'],['Bebek','🦆'],['Kerbau','🐃'],['Kucing Dapur','🐱'],['Kodok','🐸'],['Musang','🦡'],['Kunang-kunang','✨'],['Garuda Kecil','🦅']];
+
+/* ===== DATA SOAL (kunci dihitung otomatis; format: [pelanggan,menu,bahan,satuan,"ekspresi",catatan]) ===== */
+const BANK=[[
+ ['Pak Darto','Wedang jahe','gula aren','kg','2/8 + 3/8'],['Bu Sri','Serabi','tepung beras','kg','5/6 - 1/6'],['Mbak Ayu','Soto','santan','liter','3/4 - 1/4'],['Pak Joyo','Es dawet','gula merah','kg','3/10 + 4/10'],
+ ['Bu Tini','Pecel','kacang tanah','kg','7/9 - 2/9'],['Kang Parto','Getuk','singkong parut','kg','4/12 + 5/12'],['Mas Bagas','Wedang ronde','jahe','kg','6/7 - 2/7'],['Bu Lastri','Serabi','santan','liter','1/5 + 2/5']],[
+ ['Bu Wati','Soto','kaldu','liter','2/3 + 1/4'],['Pak Hadi','Serabi','tepung','kg','3/4 - 1/6'],['Mbok Yem','Getuk','singkong','kg','1 1/2 + 2 1/3'],['Kang Slamet','Es dawet','santan','liter','2 1/4 - 1 2/3'],
+ ['Bu Narti','Pecel','bumbu kacang','kg','1/2 + 3/5'],['Pak Rudi','Wedang jahe','air','liter','5/6 - 1/4'],['Mbak Dewi','Serabi','gula aren','kg','3 1/5 + 1 1/2'],['Mas Anto','Soto','kaldu','liter','4 1/3 - 2 3/4']],[
+ ['Pak Lurah','Nasi tumpeng','beras ketan','kg','2/3 + 3/4 - 1/6','Pesanan pesta.'],['Dapur Umum','Nasi','beras','kg','5 - 1 2/3 - 2 1/4','Stok beras 5 kg, kemarin terpakai 1 2/3 kg dan hari ini 2 1/4 kg. Berapa sisanya?'],
+ ['Kenduri Desa','Es dawet','santan','liter','3 1/2 - 1 3/4 + 2/5','Pesanan pesta.'],['Bu Sri','Pecel','kacang','kg','1 1/2 + 2 1/4 - 1 5/6','Ditambah, lalu sebagian dipakai.'],
+ ['Hajatan','Wedang uwuh','gula batu','kg','3/5 + 1/2 + 1/4','Tiga bahan dicampur.'],['Warung Pak Min','Kuah soto','kaldu','liter','6 - 2 1/3 - 1 1/2','Stok 6 liter terpakai dua kali.'],
+ ['Dapur Umum','Getuk','singkong','kg','2 3/4 + 1 1/3 - 2/3','Tambah stok lalu dikurangi.'],['Sayembara','Serabi','santan','liter','4 - 1 3/8 + 1/2','Sisa stok ditambah kiriman.']]];
+const LV=[['Warung Pagi','Pagi di Banyubiru. Pelanggan pertama datang dan semuanya ramah. Chef AI mengajakmu mulai dengan takaran yang sederhana.'],
+ ['Dapur Balai Desa','Pesanan semakin banyak. Nama Baruklinting dan Nyi Lantung makin dipuji, sementara beberapa warga mulai berbisik dengan wajah masam.'],
+ ['Malam Sayembara','Inilah racikan penentu sayembara. Rasa iri warga makin besar dan mereka mulai merencanakan sesuatu terhadap Nyi Lantung. Selesaikan semua racikan dengan tepat agar Chef AI dapat menyajikan hidangan terbaik.']];
+const PB=[['🐉','Baruklinting, naga muda berwujud ular ajaib, sedang menuju Gunung Telomoyo untuk menemui ayahnya, Ki Hajar Salokantara.'],
+ ['🏘️','Di Desa Banyubiru, ia mendapati desa ramai oleh sayembara: menemukan racikan resep yang pas dari masakan khas desa, dengan hadiah menggiurkan.'],
+ ['👵','Di sana ia bertemu Nyi Lantung, nenek miskin yang baik hati, dan membantunya.'],
+ ['🧑‍🍳','Kamu adalah sahabat Baruklinting! Untuk membantunya melanjutkan perjalanan dan ikut sayembara, jadilah asisten koki yang cekatan.'],
+ ['🥣','Pahami pecahan, lalu jumlahkan dan kurangkan takaran resep dengan tepat bersama Chef AI.']];
+const PE=[['Racikan terbaik berhasil dibuat dan hadiah sayembara sudah di depan mata. Warga yang iri menyadari Nyi Lantung dan Baruklinting paling berjasa, lalu beramai-ramai berusaha menghabisi Nyi Lantung agar tidak menerima hadiah.',5],
+ ['Baruklinting menancapkan sebuah lidi dan menantang siapa pun mencabutnya. Tak seorang pun sanggup, hingga Baruklinting mencabutnya sendiri.',15],
+ ['Dari lubang bekas lidi memancar air deras. Terjadilah banjir bandang yang menenggelamkan desa dan menjelma menjadi Rawa Pening.',50],
+ ['Nyi Lantung selamat karena dibekali perahu oleh Baruklinting, dan kamu selamat bersamanya. Baruklinting melanjutkan perjalanan ke Gunung Telomoyo dan bertemu ayahnya, Ki Hajar Salokantara.',25]];
+const QM=[{q:'Pada pecahan \\(\\frac{3}{8}\\), yang disebut penyebut adalah ...',o:['3','8','11','5'],a:1,x:'Penyebut adalah angka di bawah garis pecahan, yaitu 8 (banyak bagian sama besar).'},
+ {q:'\\(\\frac{3}{7}+\\frac{2}{7}=\\) ...',o:['5/14','5/7','1/7','6/7'],a:1,e:'3/7 + 2/7'},{q:'\\(\\frac{1}{2}+\\frac{1}{3}=\\) ...',o:['2/5','5/6','1/6','2/6'],a:1,e:'1/2 + 1/3'},
+ {q:'\\(\\frac{3}{4}-\\frac{1}{6}=\\) ...',o:['1/3','7/12','2/10','5/12'],a:1,e:'3/4 - 1/6'},{q:'\\(3\\frac{1}{2}-1\\frac{3}{4}=\\) ...',o:['2 1/4','1 3/4','2 1/2','1 1/4'],a:1,e:'3 1/2 - 1 3/4'}];
+const QF=['3/4 + 1/6','2 1/2 - 3/4'];
+
+/* ===== FUNGSI PECAHAN ===== */
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a),lcm=(a,b)=>a/gcd(a,b)*b;
+function term(s){s=s.trim();let m=s.match(/^(\d+)\s+(\d+)\/(\d+)$/);if(m)return{w:+m[1],n:+m[2],d:+m[3]};m=s.match(/^(\d+)\/(\d+)$/);return m?{w:0,n:+m[1],d:+m[2]}:{w:+s,n:0,d:1}}
+function parse(e){const p=e.split(/\s([+-])\s/),t=[{s:1,...term(p[0])}];for(let i=1;i<p.length;i+=2)t.push({s:p[i]=='-'?-1:1,...term(p[i+1])});return t}
+const imp=t=>t.w*t.d+t.n,tx=t=>t.d==1?`${t.w}`:`${t.w||''}\\frac{${t.n}}{${t.d}}`;
+const exprTex=t=>t.map((x,i)=>(i?(x.s>0?'+':'-'):'')+tx(x)).join('');
+function solve(t){const L=t.reduce((a,x)=>lcm(a,x.d),1),r=t.reduce((a,x)=>a+x.s*imp(x)*(L/x.d),0),g=gcd(r,L);return{n:r/g,d:L/g,L,r}}
+const mix=f=>f.d==1?`${f.n}`:f.n>f.d?`${Math.floor(f.n/f.d)}\\frac{${f.n%f.d}}{${f.d}}`:`\\frac{${f.n}}{${f.d}}`;
+const ftx=s=>/^[\d ]+\/?\d*$/.test(s)?`\\(${tx(term(s))}\\)`:s;
+function steps(e){const t=parse(e),s=solve(t),L=s.L,L2=(x,y)=>`<div>${x} \\(${y}\\)</div>`;let o=[L2('Soal:',exprTex(t))];
+ if(t.some(x=>x.w&&x.n))o.push(L2('Ubah ke pecahan biasa:',t.map((x,i)=>(i?(x.s>0?'+':'-'):'')+`\\frac{${imp(x)}}{${x.d}}`).join('')));
+ const same=t.every(x=>x.d==t[0].d);
+ if(!same){o.push(`<div>KPK dari ${t.map(x=>x.d).join(', ')} = ${L}. Samakan penyebut:</div>`);o.push(L2('',t.map((x,i)=>(i?(x.s>0?'+':'-'):'')+`\\frac{${imp(x)*L/x.d}}{${L}}`).join('')))}
+ o.push(L2('Hitung pembilangnya (penyebut tetap!):',`\\frac{${t.map((x,i)=>(i?(x.s>0?'+':'-'):'')+imp(x)*L/x.d).join('')}}{${L}}=\\frac{${s.r}}{${L}}`));
+ if(gcd(s.r,L)>1)o.push(L2('Sederhanakan (bagi FPB '+gcd(s.r,L)+'):',`\\frac{${s.n}}{${s.d}}`));
+ if(s.n>s.d&&s.d>1)o.push(L2('Pecahan campuran:',mix(s)));return o.join('')}
+function diag(t,a){const sn=t.reduce((x,y)=>x+y.s*imp(y),0),sd=t.reduce((x,y)=>x+y.d,0);
+ if(t.length==2&&!a.w&&a.n==sn&&a.d==sd)return 'Penyebut tidak ikut dijumlahkan/dikurangkan! Penyebut tetap, hanya pembilang yang dihitung.';
+ if(t.some(x=>x.d!=t[0].d)&&t.some(x=>x.d==a.d))return 'Penyebutnya belum disamakan. Cari KPK dulu.';
+ if(t.some(x=>x.w&&x.n)&&t.some(x=>x.s<0))return 'Periksa lagi peminjaman satu bulatan (1 = d/d) pada pecahan campuran.';
+ return 'Hitunganmu belum tepat. Periksa langkahnya sekali lagi.'}
+function judge(t,a){const s=solve(t);if(!(a.d>0))return{msg:'Penyebut tidak boleh kosong atau nol.'};
+ if((a.w*a.d+a.n)*s.d!==s.n*a.d)return{msg:diag(t,a)};
+ if(gcd(a.n,a.d)!=1||(a.w&&a.n>=a.d))return{simp:1,msg:'Nilainya sudah benar, tetapi belum paling sederhana. Sederhanakan dulu dengan FPB, atau tulis sebagai pecahan campuran!'};return{ok:1}}
+const hint=t=>t.every(x=>x.d==t[0].d)&&!t.some(x=>x.w)?'Penyebutnya sudah sama, jadi tetap. Hitung pembilangnya saja, lalu sederhanakan.':`Samakan dulu penyebutnya. KPK dari penyebutnya adalah ${solve(t).L}. Pecahan campuran boleh diubah ke pecahan biasa dulu.`;
+
+/* ===== UTILITAS, AUDIO, POP UP ===== */
+const $=id=>document.getElementById(id),app=$('app'),main=$('main'),shuf=a=>[...a].sort(()=>Math.random()-.5);
+const ts=el=>{window.MathJax&&MathJax.typesetPromise&&MathJax.typesetPromise([el||document.body]).catch(()=>0)};
+const im=(src,e,c='')=>`<span class="pw ${c}"><img src="${src}" onload="this.nextSibling.style.display='none'" onerror="this.style.display='none'"><i>${e}</i></span>`;
+const bg=(k,g)=>app.style.backgroundImage=`url(${ASSETS[k]}),${g}`;
+function toast(t){const d=document.createElement('div');d.className='toast';d.textContent=t;app.appendChild(d);setTimeout(()=>d.remove(),2200)}
+function modal(h){const o=document.createElement('div');o.className='ov';o.innerHTML=`<div class="md"><button class="btn x" onclick="this.closest('.ov').remove()">✕</button>${h}</div>`;app.appendChild(o);ts(o);return o}
+const SND={bgm:new Audio('assets/suara/bgm_gamelan.mp3'),klik:'assets/suara/sfx_klik.mp3',benar:'assets/suara/sfx_benar.mp3',salah:'assets/suara/sfx_salah.mp3'};
+SND.bgm.loop=true;SND.bgm.volume=.4;
+const bgm={muted:false,play(){SND.bgm.muted=muted||this.muted;return SND.bgm.play()}};let muted=false,started=false;
+function sfx(k){if(muted||!SND[k])return;try{const a=new Audio(SND[k]);a.volume=.8;a.play().catch(()=>0)}catch(e){}}
+document.addEventListener('click',e=>{if(!started){started=true;bgm.play().catch(()=>0)}if(e.target.closest('button'))sfx('klik')});
+function snd(){muted=!muted;bgm.muted=muted;SND.bgm.muted=muted;$('sb').textContent=muted?'🔇':'🔊'}
+function confetti(){for(let i=0;i<50;i++){const c=document.createElement('b');c.className='cf';c.style.cssText=`left:${Math.random()*100}%;background:hsl(${Math.random()*360},90%,60%);animation-delay:${Math.random()*.5}s`;app.appendChild(c);setTimeout(()=>c.remove(),2600)}}
+const okFx=()=>{sfx('benar');confetti()},badFx=()=>{sfx('salah');app.classList.add('shake');setTimeout(()=>app.classList.remove('shake'),400)};
+const ans=id=>`<span class="fi"><input id="${id}w" type="number" min="0" placeholder="bulat"><span class="fr"><input id="${id}n" type="number" min="0" placeholder="pembilang"><hr><input id="${id}d" type="number" min="1" placeholder="penyebut"></span></span>`;
+const rd=id=>{const g=k=>$(id+k).value.trim(),w=+g('w'),n=g('n'),d=g('d');if(n===''&&d==='')return g('w')===''?null:{w,n:0,d:1};return{w,n:+n,d:+d}};
+function fit(){document.documentElement.style.fontSize=Math.min(innerWidth,innerHeight*16/9)/80+'px'}addEventListener('resize',fit);fit();
+
+/* ===== NAVIGASI & PROGRES ===== */
+const S={nama:'',kar:-1,prog:{A:1},hist:[],cur:'A',q:{m:[],f:[]},lv:[null,null,null],kes:[''],pi:0},R={};
+$('top').innerHTML=`<button class="btn" onclick="S.hist=[];go('A')">🏠 Home</button><button class="btn" onclick="goBack()">⬅ Back</button><span class="sp"></span><button class="btn" id="sb" onclick="snd()">🔊</button><button class="btn" onclick="info(0)">📘 Materi</button><button class="btn" onclick="info(1)">❓ Panduan</button><button class="btn" onclick="info(2)">👤 Profil Pengembang</button>`;
+function go(s,back){if(!S.prog[s])return toast('🔒 Selesaikan bagian sebelumnya dulu');if(!back&&S.cur!=s)S.hist.push(S.cur);S.cur=s;main.scrollTop=0;R[s]()}
+function goBack(){const p=S.hist.pop();p?go(p,1):toast('Ini halaman pertama')}
+function info(k){modal([`<h2>📘 Materi</h2><p><b>Mata Pelajaran:</b> Matematika<br><b>Kelas/Fase:</b> VII/D<br><b>Topik:</b> Bilangan Rasional (Penjumlahan dan Pengurangan Bilangan Pecahan)<br><b>Tujuan Pembelajaran:</b> Murid memahami proses penjumlahan dan pengurangan pecahan serta dapat menyelesaikan masalah yang berkaitan dengan penjumlahan dan pengurangan dengan tepat.</p>`,
+ `<h2>❓ Panduan Penggunaan</h2><ol><li><b>A</b>: isi nama/kelompok, pilih karakter, klik Mulai.</li><li><b>B</b>: baca prolog dengan tombol Next.</li><li><b>C</b>: klik Bantu, pelajari 4 panel, kerjakan latihan soal.</li><li><b>D</b>: Simulator Dapur Pintar, 3 level, tiap level 5 pesanan, 2 kesempatan. Level berikutnya terbuka bila minimal 3 pesanan benar.</li><li><b>E</b>: baca prolog, buka kotak hadiah, isi jawaban refleksi.</li></ol><p><b>Menjawab pecahan:</b> isi pembilang dan penyebut (pecahan campuran: isi juga kolom bilangan bulat), jawaban harus paling sederhana, lalu tekan Racik!</p><p><b>Tombol:</b> 🏠 kembali ke awal, ⬅ ke layar sebelumnya, 🔊 mute/unmute musik.</p>`,
+ `<h2>👤 Profil Pengembang</h2><div class="two" style="grid-template-columns:12rem 1fr">${im(ASSETS.foto,'👨‍🏫','sm')}<div><table style="border-collapse:collapse;line-height:1.7"><tr><td><b>Nama</b></td><td>&nbsp;:&nbsp;</td><td>Mochamad Hendri Kusuma, S.Pd.</td></tr><tr><td><b>Instansi</b></td><td>&nbsp;:&nbsp;</td><td>SMP Negeri 2 Banyubiru</td></tr><tr><td><b>Mata Pelajaran</b></td><td>&nbsp;:&nbsp;</td><td>Matematika</td></tr><tr><td><b>Email</b></td><td>&nbsp;:&nbsp;</td><td>mochamad918@guru.smp.belajar.id</td></tr><tr><td><b>Tahun Pembuatan</b></td><td>&nbsp;:&nbsp;</td><td>2026</td></tr></table><b>Prestasi:</b><ul><li>Juara 3 Olimpiade Guru Nasional Mapel Matematika Disdikbudpora Kabupaten Semarang Tahun 2024</li><li>Juara 3 Guru Berprestasi Disdikbudpora Kabupaten Semarang Tahun 2025</li></ul></div></div>`][k])}
+
+/* ===== LAYAR A ===== */
+R.A=()=>{bg('bg_awal',SEA);main.innerHTML=`<div class="two"><div><h1>Jejak Baruklinting : Chef Hebat Banyubiru</h1><div class="vid"><div class="fb">🐉➡️⛰️<small>Baruklinting menuju Gunung Telomoyo dan singgah di Banyubiru: sayembara masak dan pecahan!</small></div>${ASSETS.video?`<video src="${ASSETS.video}" controls onerror="this.style.display='none'"></video>`:''}</div></div>
+<div class="card"><b>Nama / Kelompok</b><input type="text" id="nm" placeholder="Ketik nama atau kelompok" value="${S.nama}" oninput="S.nama=this.value;chk()"><b>Pilih temanmu</b><div class="chs">${CH.map((c,i)=>`<button class="ch${S.kar==i?' sel':''}" onclick="S.kar=${i};R.A()">${im(ASSETS.kar[i],c[1])}<small>${c[0]}</small></button>`).join('')}</div><button id="st" class="btn" onclick="S.prog.B=1;go('B')">Mulai Petualangan</button></div></div>`;chk()};
+const chk=()=>$('st').disabled=!(S.nama.trim()&&S.kar>=0);
+
+/* ===== LAYAR B ===== */
+R.B=()=>{bg('bg_prolog',SEA);let i=0;const draw=()=>{main.innerHTML=`<div class="card sl">${im(ASSETS.prolog[i],PB[i][0],'big')}<p>${PB[i][1]}</p>${i?'<button class="btn s" id="pv">‹ Sebelumnya</button>':''}${i<4?'<button class="btn" id="nx">Next ›</button>':'<button class="btn" id="gc">Ikuti Perjalanan Baruklinting</button>'}<br>${i+1}/5</div>`;
+ if($('pv'))$('pv').onclick=()=>{i--;draw()};if($('nx'))$('nx').onclick=()=>{i++;draw()};if($('gc'))$('gc').onclick=()=>{S.prog.C=1;go('C')}};draw()};
+
+/* ===== LAYAR C: PENDALAMAN MATERI ===== */
+R.C=()=>{bg('bg_prolog',SEA);main.innerHTML=`<div class="card sl">${im(ASSETS.bukit,'⛰️','big')}<p>Dalam perjalanan, Baruklinting beristirahat di Bukit Cinta. Di sana ia menemukan sebuah peti kuno berisi gulungan "Wasiat Takaran", catatan leluhur tentang cara meracik masakan yang pas. Wasiat itu hanya bisa dibaca oleh orang yang memahami pecahan. Bantulah Baruklinting memahaminya agar bisa melanjutkan perjalanan menuju Banyubiru dan Gunung Telomoyo.</p><button class="btn" onclick="openPanels()">Bantu</button>${S.prog.D?'<button class="btn s" onclick="go(\'D\')">Ke Bagian D ›</button>':''}</div>`};
+const PN=['1. Konsep Pecahan','2. Penjumlahan Pecahan','3. Pengurangan Pecahan','4. Latihan Soal'];
+function openPanels(){modal('<h3 id="pt2"></h3><div id="pb"></div><div class="nav"><button class="btn s" onclick="pn(-1)">‹ Sebelumnya</button><span id="dots"></span><button class="btn s" onclick="pn(1)">Berikutnya ›</button></div>').firstChild.classList.add('wide');rp()}
+const pn=d=>{S.pi=Math.max(0,Math.min(3,S.pi+d));rp()};
+function rp(keep){const sc=keep?$('pb').parentNode.scrollTop:0;$('pt2').textContent=PN[S.pi];$('pb').innerHTML=[p1,p2,p3,p4][S.pi]();$('dots').textContent=[0,1,2,3].map(i=>i==S.pi?'●':'○').join(' ');if(S.pi==0)pv();$('pb').parentNode.scrollTop=sc;ts($('pb'))}
+function pie(n,d){let s='';for(let i=0;i<d;i++){const a=2*Math.PI*i/d-Math.PI/2,b=2*Math.PI*(i+1)/d-Math.PI/2,c=i<n?'f':'e';s+=d==1?`<circle cx="50" cy="50" r="45" class="${c}"/>`:`<path d="M50 50L${50+45*Math.cos(a)} ${50+45*Math.sin(a)}A45 45 0 0 1 ${50+45*Math.cos(b)} ${50+45*Math.sin(b)}Z" class="${c}"/>`}return `<svg viewBox="0 0 100 100" width="90">${s}</svg>`}
+const barI=(n,d)=>{let o='';for(let u=0;u<Math.ceil(n/d);u++){o+=`<svg viewBox="0 0 80 14" width="80" style="margin:1px">`+Array.from({length:d},(_,i)=>`<rect x="${i*80/d}" y="0" width="${80/d}" height="14" class="${u*d+i<n?'f':'e'}"/>`).join('')+'</svg>'}return `<span>${o}</span>`};
+function pv(){const d=+$('sd').value;$('sn').max=d;const n=Math.min(+$('sn').value,d);
+ $('pvw').innerHTML=`<p>\\(\\frac{${n}}{${d}}\\)</p>${pie(n,d)} ${barI(n,d)}<br><svg viewBox="0 0 170 24" width="170"><line x1="5" y1="10" x2="165" y2="10" stroke="#333"/>${Array.from({length:d+1},(_,i)=>`<line x1="${5+160*i/d}" y1="6" x2="${5+160*i/d}" y2="14" stroke="#333"/>`).join('')}<circle cx="${5+160*n/d}" cy="10" r="4" fill="#e33"/></svg><br>${Array.from({length:d},(_,i)=>`<span style="opacity:${i<n?1:.25}">🥚</span>`).join('')} <small>${n} dari ${d} butir telur</small><br><svg viewBox="0 0 40 50" width="50"><rect x="8" y="${45-40*n/d}" width="24" height="${40*n/d}" fill="#5ec2e8"/><path d="M8 5V45H32V5" fill="none" stroke="#333" stroke-width="2"/></svg> <small>gelas ukur ${n}/${d}</small>`;ts($('pvw'))}
+const p1=()=>`<div class="two"><div><p>Pecahan menyatakan bagian dari keseluruhan. <b>Pembilang</b> (atas) = bagian yang diambil, <b>penyebut</b> (bawah) = banyak bagian sama besar. Geser untuk mencoba (serabi, batang, garis bilangan, telur, gelas ukur):</p>Pembilang <input type="range" id="sn" min="0" max="8" value="3" oninput="pv()"><br>Penyebut <input type="range" id="sd" min="1" max="8" value="8" oninput="pv()"><div id="pvw"></div></div><div>${im(ASSETS.dapur_png,'🍳','sm')}<ul><li>Pecahan biasa: \\(\\frac{3}{4}\\); campuran: \\(2\\frac{1}{4}\\); tidak biasa: \\(\\frac{9}{4}\\).</li><li>Takaran: \\(\\frac{1}{2}\\) gelas, \\(\\frac{3}{4}\\) kg.</li><li>Senilai: \\(\\frac{1}{2}=\\frac{2}{4}=\\frac{3}{6}\\).</li><li>Menyederhanakan: bagi pembilang dan penyebut dengan FPB. \\(\\frac{6}{8}=\\frac{6:2}{8:2}=\\frac{3}{4}\\).</li></ul></div></div>`;
+const ex=e=>{const t=parse(e),s=solve(t);return `<div class="ex">${steps(e)}<div>${t.map((x,i)=>(i?(x.s>0?' + ':' − '):'')+barI(imp(x),x.d)).join('')} = ${barI(s.n,s.d)}</div></div>`};
+const p2=()=>`<h4>(a) Penyebut sama: pembilang dijumlahkan</h4>${ex('3/8 + 2/8')}<h4>(b) Penyebut berbeda: samakan dengan KPK</h4>${ex('2/3 + 1/4')}<h4>(c) Pecahan campuran</h4>${ex('1 1/2 + 2 1/3')}<div class="warn">⚠️ Miskonsepsi: penyebut TIDAK ikut dijumlahkan! \\(\\frac{1}{2}+\\frac{1}{3}\\neq\\frac{2}{5}\\), yang benar \\(\\frac{5}{6}\\).</div>`;
+const p3=()=>`<h4>(a) Penyebut sama</h4>${ex('5/6 - 1/6')}<h4>(b) Penyebut berbeda</h4>${ex('3/4 - 1/6')}<h4>(c) Pecahan campuran (meminjam satu bulatan)</h4>${ex('3 1/4 - 1 2/3')}<p>Cara meminjam: \\(3\\frac{3}{12}-1\\frac{8}{12}\\), karena \\(\\frac{3}{12}<\\frac{8}{12}\\) pinjam 1: \\(3\\frac{3}{12}=2\\frac{15}{12}\\), sehingga \\(2\\frac{15}{12}-1\\frac{8}{12}=1\\frac{7}{12}\\).</p><div class="warn">⚠️ Miskonsepsi: penyebut tidak ikut dikurangkan, dan jangan membalik pengurangan (yang kecil dikurangi yang besar).</div>`;
+function pick(i,j){S.q.m[i]=j;j==QM[i].a?okFx():badFx();rp(1)}
+function cekF(i){const t=parse(QF[i]),a=rd('f'+i);if(!a)return toast('Isi jawabanmu dulu');const j=judge(t,a);if(j.simp)return toast(j.msg);S.q.f[i]=j.ok?1:0;j.ok?okFx():badFx();rp(1)}
+function p4(){const mc=QM.map((q,i)=>{const c=S.q.m[i],d=c!=null;return `<div class="qc"><b>${i+1}.</b> ${q.q}<div class="op">${q.o.map((o,j)=>`<button class="btn s ${d?(j==q.a?'ok':j==c?'no':''):''}" ${d?'disabled':`onclick="pick(${i},${j})"`}>${ftx(o)}</button>`).join('')}</div>${d?`<button class="lnk" onclick="this.nextSibling.hidden=!this.nextSibling.hidden">💡 Lihat penjelasan</button><div hidden class="ex">${q.x||steps(q.e)}</div>`:''}</div>`}).join('');
+ const fi=QF.map((e,i)=>{const c=S.q.f[i],d=c!=null;return `<div class="qc"><b>${6+i-1}.</b> Hitung \\(${exprTex(parse(e))}\\) (bentuk paling sederhana)<br>${d?`<b>${c?'✅ Benar!':'❌ Belum tepat.'}</b><div class="ex">${steps(e)}</div>`:ans('f'+i)+`<button class="btn" onclick="cekF(${i})">Periksa</button>`}</div>`}).join('');
+ const done=QM.every((_,i)=>S.q.m[i]!=null)&&QF.every((_,i)=>S.q.f[i]!=null);let end='';
+ if(done){const b=QM.filter((q,i)=>S.q.m[i]==q.a).length+S.q.f.filter(x=>x).length;S.qScore=Math.round(b/7*100);S.prog.D=1;end=`<h3>Skor: ${S.qScore} (${b}/7 benar)</h3><button class="btn" onclick="document.querySelector('.ov').remove();go('D')">Lanjut ke Bagian D ›</button>`}
+ return mc+fi+end}
+
+/* ===== LAYAR D: SIMULATOR DAPUR PINTAR ===== */
+let P;
+R.D=()=>{bg('bg_dapur',KIT);if(!S.dIntro){main.innerHTML=`<div class="card sl">${im(ASSETS.balai,'🏛️','big')}<p>Baruklinting tiba di Balai Desa Banyubiru. Warga berkumpul mengikuti sayembara menemukan racikan resep yang paling pas. Di sana muncul Chef AI, juru masak cerdas yang kewalahan menerima banyak pesanan. Baruklinting melihat Nyi Lantung yang bingung karena tidak punya cukup bahan dan tenaga untuk ikut sayembara, lalu ia dan kamu membantunya. Namun, warga yang melihat kebaikan Baruklinting kepada Nyi Lantung mulai iri hati. Jadilah asisten koki yang cekatan: bantu Chef AI menyelesaikan semua pesanan dengan takaran yang tepat.</p><button class="btn" onclick="S.dIntro=1;R.D()">Bantu</button></div>`;return}
+ const open=i=>i==0||(S.lv[i-1]&&S.lv[i-1].ok>=3);
+ main.innerHTML=`<h2 style="color:#fff">Peta Dapur</h2><div class="doors">${LV.map((l,i)=>{const r=S.lv[i];return `<button class="door ${open(i)?'':'lock'}" onclick="lvIntro(${i})">${open(i)?'🚪':'🔒'}<b>Level ${i+1}</b><span>${l[0]}</span><span>${r?'⭐'.repeat(r.stars)+'☆'.repeat(3-r.stars):'☆☆☆'}</span><small>${r?'Skor '+r.score:'Belum dimainkan'}</small></button>`}).join('')}</div><div style="text-align:center">${S.prog.E?'<button class="btn" onclick="go(\'E\')">Lanjut ke Refleksi ›</button>':''}</div>`};
+function lvIntro(i){if(!(i==0||(S.lv[i-1]&&S.lv[i-1].ok>=3)))return toast('🔒 Level '+i+' butuh minimal 3 pesanan benar');
+ modal(`<h2>Level ${i+1}: ${LV[i][0]}</h2><p>${LV[i][1]}</p><button class="btn" onclick="this.closest('.ov').remove();startLevel(${i})">Mulai</button>`)}
+function startLevel(l){P={l,o:shuf(BANK[l]).slice(0,5),i:0,t:0,h:0,sc:[],ok:0,hp:3};S.prog.P=1;go('P')}
+R.P=()=>{bg('bg_dapur',KIT);show()};
+const hearts=()=>'❤️'.repeat(P.hp)+'🤍'.repeat(5-P.hp);
+function show(){const [c,m,it,u,e,note]=P.o[P.i],t=parse(e);P.t=0;P.h=0;
+ main.innerHTML=`<div class="hud">Level ${P.l+1}: ${LV[P.l][0]} · Pesanan ${P.i+1}/5 · Kepuasan Pelanggan: <span id="hp">${hearts()}</span></div><div class="kit"><div>${im(ASSETS.chef_ai,'👨‍🍳','sm')}<div class="bub" id="bub">Pesanan dari ${c}: ${m}. Hitung takaran ${it}-nya ya!</div></div>
+ <div class="card" id="rcp"><h3>${m} untuk ${c}</h3>${note?`<p><i>${note}</i></p>`:''}<p>Takaran awal: <b>${it}</b> \\(${tx(t[0])}\\) ${u}</p>${t.slice(1).map(x=>`<p>${x.s>0?'➕ Tambah':'➖ Kurangi'} ${it} \\(${tx(x)}\\) ${u}</p>`).join('')}<p>\\(${exprTex(t)}=\\,?\\) ${u}</p>${ans('a')}<div id="act"><button class="btn" onclick="racik()">Racik!</button><button class="btn s" onclick="petunjuk()">Petunjuk 💡</button></div></div>
+ <div class="cup"><svg viewBox="0 0 60 100"><rect id="fill" x="10" y="5" width="40" height="90" fill="#5ec2e8"/><path d="M10 5V95H50V5" fill="none" stroke="#333" stroke-width="3"/></svg><div id="cus">🙂</div></div></div>`;ts(main)}
+const say=h=>{$('bub').innerHTML=h;ts($('bub'))},setHp=d=>{P.hp=Math.max(0,Math.min(5,P.hp+d));$('hp').textContent=hearts()};
+function petunjuk(){if(P.h)return say('Petunjuk hanya boleh 1 kali per pesanan.');P.h=1;say('💡 '+hint(parse(P.o[P.i][4]))+' <small>(skor −20)</small>')}
+function racik(){const e=P.o[P.i][4],t=parse(e),a=rd('a');if(!a)return say('Isi dulu jawabanmu ya.');const j=judge(t,a);
+ if(j.simp)return say('📝 '+j.msg);
+ if(j.ok){P.sc.push(Math.max(0,(P.t?60:100)-(P.h?20:0)));P.ok++;setHp(1);okFx();say('Mantap! Takaran pas. 🎉');$('cus').textContent='😋';const s=solve(t);$('fill').style.transform=`scaleY(${s.n/s.d/Math.ceil(s.n/s.d)})`;lock()}
+ else{P.t++;setHp(-1);badFx();$('cus').textContent='😕';if(P.t==1)say('Belum tepat. '+j.msg+' Coba sekali lagi!');else{P.sc.push(0);say('Kesempatan habis. Ini pembahasannya:');$('rcp').insertAdjacentHTML('beforeend',`<div class="ex">${steps(e)}</div>`);ts($('rcp'));lock()}}}
+function lock(){['aw','an','ad'].forEach(k=>$(k).disabled=true);$('act').innerHTML=`<button class="btn" onclick="P.i++;P.i>=5?fin():show()">${P.i>=4?'Lihat Hasil':'Pesanan berikutnya ›'}</button>`}
+function fin(){const stars=P.ok>=5?3:P.ok==4?2:P.ok==3?1:0,score=P.sc.reduce((a,b)=>a+b,0),old=S.lv[P.l],r={stars,score,ok:P.ok};
+ if(!old||stars*1000+score>old.stars*1000+old.score||r.ok>old.ok)S.lv[P.l]={stars:Math.max(stars,old?old.stars:0),score:Math.max(score,old?old.score:0),ok:Math.max(P.ok,old?old.ok:0)};
+ if(P.l==2&&S.lv[2].ok>=3)S.prog.E=1;if(stars)okFx();
+ modal(`<h2>Level ${P.l+1} selesai!</h2><p style="font-size:2rem">${'⭐'.repeat(stars)||'😅'}</p><p>${P.ok}/5 pesanan benar · Skor ${score}/500</p><p>${stars?'Hebat!':'Ayo coba lagi untuk membuka level berikutnya (minimal 3 benar).'}</p><button class="btn" onclick="S.hist.pop();go('D',1);document.querySelector('.ov').remove()">Peta Level</button><button class="btn s" onclick="document.querySelector('.ov').remove();startLevel(${P.l})">Ulangi Level</button>`)}
+
+/* ===== LAYAR E: REFLEKSI ===== */
+R.E=()=>{bg('bg_prolog',SEA);let i=0;const draw=()=>{const last=i==3;main.innerHTML=`<div class="card sl">${im(ASSETS.banjir,'🌊',last?'sm':'big')}<p>${PE[i][0]}</p>${i?'<button class="btn s" id="pv">‹ Sebelumnya</button>':''}${last?'':'<button class="btn" id="nx">Next ›</button>'}${last?`<h2>Selamat, kamu berhasil mengikuti Jejak Baruklinting!</h2><div class="gift" onclick="kes()">${im(ASSETS.hadiah,'🎁','sm')}</div><small>Klik kotak hadiah</small>`:''}</div>`;
+ if($('pv'))$('pv').onclick=()=>{i--;draw()};if($('nx'))$('nx').onclick=()=>{i++;draw()}};draw()};
+function kes(){modal(`<h2>Kesimpulan</h2><p><b>Pertanyaan:</b> Mengapa kita harus menyamakan penyebut terlebih dahulu sebelum menjumlahkan atau mengurangkan pecahan?</p><textarea id="k1" rows="4">${S.kes[0]}</textarea><br><button class="btn" onclick="simpan()">Simpan Jawaban</button>`)}
+function simpan(){const a=$('k1').value.trim();if(!a)return toast('Isi jawabanmu dulu ya');S.kes=[a];document.querySelector('.ov').remove();confetti();
+ modal(`<h2>🏆 Rekap Keberhasilan</h2><p><b>${S.nama}</b> bersama ${im(ASSETS.kar[S.kar],CH[S.kar][1])} <b>${CH[S.kar][0]}</b></p><p>Nilai Latihan Soal (Bagian C): <b>${S.qScore??'-'}</b></p>${LV.map((l,i)=>`<p>Level ${i+1} ${l[0]}: ${S.lv[i]?'⭐'.repeat(S.lv[i].stars)+' · Skor '+S.lv[i].score:'belum dimainkan'}</p>`).join('')}<p><b>Jawaban Refleksi:</b> ${esc(a)}</p><button class="btn" onclick="document.querySelector('.ov').remove();S.hist=[];go('A')">🏠 Home</button>`)}
+const esc=s=>s.replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+go('A',1);
+</script></body></html>
